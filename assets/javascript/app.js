@@ -80,15 +80,15 @@ $().ready(function () {
         correct = 0;
         wrong = 0;
         unanswered = 0;
-        timeLeft=120;
+        timeLeft = 120;
         clearInterval(intervalID);
+        $('#gamebox').show();
     }
 
     $('#gamebox').hide();
     $('#gameover').hide();
 
     $('.start').click(function () {
-        $('#gamebox').show();
         $('.start').hide();
         gameStart();
     })
