@@ -71,6 +71,8 @@ $().ready(function () {
     var wrong = 0;
     var unanswered = 0;
 
+    $('#gamebox').hide();
+
 
 
 
