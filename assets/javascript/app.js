@@ -66,9 +66,12 @@ $().ready(function () {
         d: '',
         ans: ''
     };
+    var question = [q1,q2,q3,q4,q5,q6,q7,q8];
     var correct = 0;
     var wrong = 0;
     var unanswered = 0;
+
+
 
 
     //make a start button on'click event which starts timer
