@@ -66,13 +66,32 @@ $().ready(function () {
         d: '',
         ans: ''
     };
-    var question = [q1,q2,q3,q4,q5,q6,q7,q8];
+    var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8];
+    var count = 0;
     var correct = 0;
     var wrong = 0;
     var unanswered = 0;
 
+    function questionDOM() {
+        $('#question').html('<h2>' + questionArray[count].question + '</h2>')
+    }
+    function gameStart() {
+        count = 0;
+        correct = 0;
+        wrong = 0;
+        unanswered = 0;
+        timeLeft=120;
+        clearInterval(intervalID);
+    }
+
     $('#gamebox').hide();
     $('#gameover').hide();
+
+    $('.start').click(function () {
+        $('#gamebox').show();
+        $('.start').hide();
+        gameStart();
+    })
 
 
 
