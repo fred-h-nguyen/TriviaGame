@@ -72,6 +72,7 @@ $().ready(function () {
     var unanswered = 0;
 
     $('#gamebox').hide();
+    $('#gameover').hide();
 
 
 
