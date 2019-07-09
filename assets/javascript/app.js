@@ -1,7 +1,7 @@
 $().ready(function () {
 
     var intervalId;
-    var timeLeft = 10;
+    var timeLeft = 120;
     var q1 = {
         question: 'a',
         a: 'a',
@@ -74,14 +74,55 @@ $().ready(function () {
 
     $('#gamebox').hide();
     $('#gameover').hide();
-    
-    function reset (){
-        timeLeft = 10;
+
+    function timer() {
+        intervalId = setInterval(function () {
+            timeLeft--;
+            $('.timerbox').html('<h2>You have ' + timeLeft + ' seconds remaining!</h2>')
+        if(timeLeft === 0){
+            count++;
+            unanswered++;
+            stop();
+            game();
+        }}, 1000)
+    }
+
+    function questionDOM() {
+        $('#question').html('<h2>' + questionArray[count].question + '</h2>');
+        $('#a').html('<h2>' + questionArray[count].a + '</h2>');
+        $('#b').html('<h2>' + questionArray[count].b + '</h2>');
+        $('#c').html('<h2>' + questionArray[count].c + '</h2>');
+        $('#d').html('<h2>' + questionArray[count].d + '</h2>');
+    }
+
+    function stop() {
+        clearInterval(intervalId);
+    }
+
+    function game() {
+        if (count === questionArray.length) {
+            $('#gamebox').hide();
+            $('#gameover').show();
+            return;
+        }
+        timeLeft = 3;
+        timer();
+        questionDOM();
+    }
+
+    function play() {
+        timeLeft = 120;
         count = 0;
         correct = 0;
         wrong = 0;
         unanswered = 0;
+        $('.start').hide();
+        $('#gamebox').show();
+        clearInterval(intervalId)
+        game();
     }
+
+    $('.start').click(play)
 
 
 
