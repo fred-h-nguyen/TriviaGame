@@ -76,11 +76,11 @@ $().ready(function () {
     $('#gameover').hide();
 
     function timer() {
+        clearInterval(intervalId);
         intervalId = setInterval(function () {
             timeLeft--;
             $('.timerbox').html('<h2>You have ' + timeLeft + ' seconds remaining!</h2>')
             if (timeLeft === 0) {
-
                 $('#isCorrect').html('<h2>You ran out of time</h2>');
                 $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
                 unanswered++;
@@ -171,6 +171,7 @@ $().ready(function () {
     })
 
     $('#c').click(function () {
+        stop();
         if (questionArray[count].c === questionArray[count].ans) {
             stop();
             $('#isCorrect').html('<h2>You are correct</h2>');
