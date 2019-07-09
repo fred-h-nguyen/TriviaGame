@@ -79,12 +79,15 @@ $().ready(function () {
         intervalId = setInterval(function () {
             timeLeft--;
             $('.timerbox').html('<h2>You have ' + timeLeft + ' seconds remaining!</h2>')
-        if(timeLeft === 0){
-            count++;
-            unanswered++;
-            stop();
-            game();
-        }}, 1000)
+            if (timeLeft === 0) {
+
+                $('#isCorrect').html('<h2>You ran out of time</h2>');
+                $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+                stop();
+                reveal();
+                unanswered++;
+            }
+        }, 1000)
     }
 
     function questionDOM() {
@@ -95,6 +98,12 @@ $().ready(function () {
         $('#d').html('<h2>' + questionArray[count].d + '</h2>');
     }
 
+    function reveal() {
+        setTimeout(function () {
+            count++;
+            game();
+        }, 3000)
+    }
     function stop() {
         clearInterval(intervalId);
     }
