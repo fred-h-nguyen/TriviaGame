@@ -3,68 +3,68 @@ $().ready(function () {
     var intervalId;
     var timeLeft = 120;
     var q1 = {
-        question: 'a',
-        a: 'a',
-        b: 'b',
-        c: 'c',
-        d: 'd',
-        ans: 'a'
+        question: 'Who played Wonder Woman?',
+        a: 'Megan Fox',
+        b: 'Elena Anaya',
+        c: 'Gal Gadot',
+        d: 'Angelina Jolie',
+        ans: 'Gal Gadot'
     };
     var q2 = {
-        question: 'b',
-        a: 'b',
-        b: 'c',
-        c: 'd',
-        d: 'q',
-        ans: 'b'
+        question: 'What is the name of the street Harry Potter lived on?',
+        a: 'Muggle Alley',
+        b: 'Privet Drive',
+        c: 'Private Drive',
+        d: 'Diagon Alley',
+        ans: 'Privet Drive'
     };
     var q3 = {
-        question: 'c',
-        a: 'c',
-        b: 'c',
-        c: 'c',
-        d: 'c',
-        ans: 'c'
+        question: "What is Nemo's Dad named?",
+        a: 'Marlin',
+        b: 'Marvin',
+        c: 'Rick',
+        d: 'Merlin',
+        ans: 'Marlin'
     };
     var q4 = {
-        question: 'd',
-        a: 'd',
-        b: 'd',
-        c: 'd',
-        d: 'd',
-        ans: 'd'
+        question: 'What game does Bond play in Casino Royale?',
+        a: 'Craps',
+        b: 'Roulette',
+        c: 'Blackjack',
+        d: 'Poker',
+        ans: 'Poker'
     };
     var q5 = {
-        question: 'e',
-        a: 'e',
-        b: 'e',
-        c: 'e',
-        d: 'e',
-        ans: 'e'
+        question: 'What animation company made Shrek?',
+        a: 'Disney',
+        b: 'Pixar',
+        c: 'Studio Ghibli',
+        d: 'Dreamworks',
+        ans: 'Dreamworks'
     };
     var q6 = {
-        question: 'f',
-        a: 'f',
-        b: 'f',
-        c: 'f',
-        d: 'f',
-        ans: 'f'
+        question: "What is the name of Jack Sparrow's Ship?",
+        a: 'The Black Flag',
+        b: 'The Black Pearl',
+        c: 'The Hispaniola',
+        d: 'The Interceptor',
+        ans: 'The Black Pearl'
     };
     var q7 = {
-        question: 'g',
-        a: 'g',
-        b: 'g',
-        c: 'g',
-        d: 'g',
-        ans: 'g'
+        question: 'What precious resource do the humans want to get in Avatar?',
+        a: 'Unobtanium',
+        b: 'Adamantium',
+        c: 'Diamond',
+        d: 'Dark Matter',
+        ans: 'Unobtanium'
     };
     var q8 = {
-        question: 'h',
-        a: 'h',
-        b: 'h',
-        c: 'h',
-        d: 'h',
-        ans: 'h'
+        question: "Why is Lightning McQueen's number 95?",
+        a: 'It was the year his car was manufactured.',
+        b: 'It was the year Cars was released.',
+        c: 'It was the year Toy Story was released.',
+        d: 'It is the fastest speed to take a turn during a drift.',
+        ans: 'It was the year Toy Story was released'
     };
     var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8];
     var count = 0;
