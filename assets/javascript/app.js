@@ -93,7 +93,6 @@ $().ready(function () {
     }
 
     function questionDOM() {
-        $('#answerbox').show();
         $('#question').html('<h2>' + questionArray[count].question + '</h2>');
         $('#a').html('<h2>' + questionArray[count].a + '</h2>');
         $('#b').html('<h2>' + questionArray[count].b + '</h2>');
@@ -126,6 +125,7 @@ $().ready(function () {
         $('#isCorrect').empty();
         $('#corAns').empty();
         $('#imgbox').empty();
+        $('#answerbox').show();
         timer();
         questionDOM();
     }
