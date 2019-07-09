@@ -1,70 +1,70 @@
 $().ready(function () {
 
-    var intervalID;
-    var timeLeft = 120;
+    var intervalId;
+    var timeLeft = 10;
     var q1 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'a',
+        a: 'a',
+        b: 'a',
+        c: 'a',
+        d: 'a',
+        ans: 'a'
     };
     var q2 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'b',
+        a: 'b',
+        b: 'b',
+        c: 'b',
+        d: 'b',
+        ans: 'b'
     };
     var q3 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'c',
+        a: 'c',
+        b: 'c',
+        c: 'c',
+        d: 'c',
+        ans: 'c'
     };
     var q4 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'd',
+        a: 'd',
+        b: 'd',
+        c: 'd',
+        d: 'd',
+        ans: 'd'
     };
     var q5 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'e',
+        a: 'e',
+        b: 'e',
+        c: 'e',
+        d: 'e',
+        ans: 'e'
     };
     var q6 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'f',
+        a: 'f',
+        b: 'f',
+        c: 'f',
+        d: 'f',
+        ans: 'f'
     };
     var q7 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'g',
+        a: 'g',
+        b: 'g',
+        c: 'g',
+        d: 'g',
+        ans: 'g'
     };
     var q8 = {
-        question: '',
-        a: '',
-        b: '',
-        c: '',
-        d: '',
-        ans: ''
+        question: 'h',
+        a: 'h',
+        b: 'h',
+        c: 'h',
+        d: 'h',
+        ans: 'h'
     };
     var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8];
     var count = 0;
@@ -72,26 +72,17 @@ $().ready(function () {
     var wrong = 0;
     var unanswered = 0;
 
-    function questionDOM() {
-        $('#question').html('<h2>' + questionArray[count].question + '</h2>')
-    }
-    function gameStart() {
+    $('#gamebox').hide();
+    $('#gameover').hide();
+    
+    function reset (){
+        timeLeft = 10;
         count = 0;
         correct = 0;
         wrong = 0;
         unanswered = 0;
-        timeLeft = 120;
-        clearInterval(intervalID);
-        $('#gamebox').show();
     }
 
-    $('#gamebox').hide();
-    $('#gameover').hide();
-
-    $('.start').click(function () {
-        $('.start').hide();
-        gameStart();
-    })
 
 
 
