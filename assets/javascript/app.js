@@ -5,17 +5,17 @@ $().ready(function () {
     var q1 = {
         question: 'a',
         a: 'a',
-        b: 'a',
-        c: 'a',
-        d: 'a',
+        b: 'b',
+        c: 'c',
+        d: 'd',
         ans: 'a'
     };
     var q2 = {
         question: 'b',
         a: 'b',
-        b: 'b',
-        c: 'b',
-        d: 'b',
+        b: 'c',
+        c: 'd',
+        d: 'q',
         ans: 'b'
     };
     var q3 = {
@@ -83,9 +83,9 @@ $().ready(function () {
 
                 $('#isCorrect').html('<h2>You ran out of time</h2>');
                 $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
-                stop();
-                reveal();
                 unanswered++;
+                stop();
+                timeout();
             }
         }, 1000)
     }
@@ -98,23 +98,29 @@ $().ready(function () {
         $('#d').html('<h2>' + questionArray[count].d + '</h2>');
     }
 
-    function reveal() {
+    function timeout() {
         setTimeout(function () {
             count++;
-            game();
+            nextQuestion();
         }, 3000)
     }
     function stop() {
         clearInterval(intervalId);
     }
 
-    function game() {
+    function nextQuestion() {
         if (count === questionArray.length) {
             $('#gamebox').hide();
             $('#gameover').show();
+            $('#numCorrect').text(correct);
+            $('#numWrong').text(wrong);
+            $('#numUnanswered').text(unanswered);
             return;
         }
-        timeLeft = 3;
+        timeLeft = 5;
+        $('#isCorrect').empty();
+        $('#corAns').empty();
+        $('#imgbox').empty();
         timer();
         questionDOM();
     }
@@ -127,11 +133,74 @@ $().ready(function () {
         unanswered = 0;
         $('.start').hide();
         $('#gamebox').show();
+        $('#gameover').hide();
         clearInterval(intervalId)
-        game();
+        nextQuestion();
     }
 
     $('.start').click(play)
+
+    $('#a').click(function () {
+        stop();
+        if (questionArray[count].a === questionArray[count].ans) {
+            $('#isCorrect').html('<h2>You are correct</h2>');
+            correct++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        } else {
+            $('#isCorrect').html('<h2>You are wrong</h2>')
+            wrong++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        }
+    })
+
+    $('#b').click(function () {
+        stop();
+        if (questionArray[count].b === questionArray[count].ans) {
+            $('#isCorrect').html('<h2>You are correct</h2>');
+            correct++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        } else {
+            $('#isCorrect').html('<h2>You are wrong</h2>')
+            wrong++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        }
+    })
+
+    $('#c').click(function () {
+        if (questionArray[count].c === questionArray[count].ans) {
+            stop();
+            $('#isCorrect').html('<h2>You are correct</h2>');
+            correct++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        } else {
+            $('#isCorrect').html('<h2>You are wrong</h2>')
+            wrong++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        }
+    })
+
+    $('#d').click(function () {
+        stop();
+        if (questionArray[count].d === questionArray[count].ans) {
+            $('#isCorrect').html('<h2>You are correct</h2>');
+            correct++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        } else {
+            $('#isCorrect').html('<h2>You are wrong</h2>')
+            wrong++;
+            $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
+            timeout();
+        }
+    })
+
+    $('.restart').click(play)
 
 
 
