@@ -1,7 +1,7 @@
 $().ready(function () {
 
     var intervalId;
-    var timeLeft = 120;
+    var timeLeft = 30;
     var q1 = {
         question: 'Who played Wonder Woman?',
         a: 'Megan Fox',
@@ -120,7 +120,7 @@ $().ready(function () {
             $('#numUnanswered').text(unanswered);
             return;
         }
-        timeLeft = 5;
+        timeLeft = 30;
         $('#isCorrect').empty();
         $('#corAns').empty();
         $('#imgbox').empty();
@@ -129,7 +129,7 @@ $().ready(function () {
     }
 
     function play() {
-        timeLeft = 120;
+        timeLeft = 30;
         count = 0;
         correct = 0;
         wrong = 0;
