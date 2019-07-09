@@ -71,6 +71,7 @@ $().ready(function () {
     var correct = 0;
     var wrong = 0;
     var unanswered = 0;
+    var clickDisabled = false;
 
     $('#gamebox').hide();
     $('#gameover').hide();
@@ -102,6 +103,8 @@ $().ready(function () {
         setTimeout(function () {
             count++;
             nextQuestion();
+            clickDisabled = false;
+            console.log(clickDisabled);
         }, 3000)
     }
     function stop() {
@@ -141,6 +144,8 @@ $().ready(function () {
     $('.start').click(play)
 
     $('#a').click(function () {
+        if (clickDisabled) { return; }
+        clickDisabled = true;
         stop();
         if (questionArray[count].a === questionArray[count].ans) {
             $('#isCorrect').html('<h2>You are correct</h2>');
@@ -156,6 +161,8 @@ $().ready(function () {
     })
 
     $('#b').click(function () {
+        if (clickDisabled) { return; }
+        clickDisabled = true;
         stop();
         if (questionArray[count].b === questionArray[count].ans) {
             $('#isCorrect').html('<h2>You are correct</h2>');
@@ -171,6 +178,8 @@ $().ready(function () {
     })
 
     $('#c').click(function () {
+        if (clickDisabled) { return; }
+        clickDisabled = true;
         stop();
         if (questionArray[count].c === questionArray[count].ans) {
             stop();
@@ -187,6 +196,8 @@ $().ready(function () {
     })
 
     $('#d').click(function () {
+        if (clickDisabled) { return; }
+        clickDisabled = true;
         stop();
         if (questionArray[count].d === questionArray[count].ans) {
             $('#isCorrect').html('<h2>You are correct</h2>');
