@@ -82,6 +82,7 @@ $().ready(function () {
             timeLeft--;
             $('.timerbox').html('<h2>You have ' + timeLeft + ' seconds remaining!</h2>')
             if (timeLeft === 0) {
+                $('#answerbox').hide();
                 $('#isCorrect').html('<h2>You ran out of time</h2>');
                 $('#corAns').html('<h2> Correct answer is ' + questionArray[count].ans + '</h2>');
                 unanswered++;
@@ -147,6 +148,7 @@ $().ready(function () {
         if (clickDisabled) { return; }
         clickDisabled = true;
         stop();
+        $('#answerbox').hide();
         if (questionArray[count].a === questionArray[count].ans) {
             $('#isCorrect').html('<h2>You are correct</h2>');
             correct++;
@@ -164,6 +166,7 @@ $().ready(function () {
         if (clickDisabled) { return; }
         clickDisabled = true;
         stop();
+        $('#answerbox').hide();
         if (questionArray[count].b === questionArray[count].ans) {
             $('#isCorrect').html('<h2>You are correct</h2>');
             correct++;
@@ -181,6 +184,7 @@ $().ready(function () {
         if (clickDisabled) { return; }
         clickDisabled = true;
         stop();
+        $('#answerbox').hide();
         if (questionArray[count].c === questionArray[count].ans) {
             stop();
             $('#isCorrect').html('<h2>You are correct</h2>');
@@ -199,6 +203,7 @@ $().ready(function () {
         if (clickDisabled) { return; }
         clickDisabled = true;
         stop();
+        $('#answerbox').hide();
         if (questionArray[count].d === questionArray[count].ans) {
             $('#isCorrect').html('<h2>You are correct</h2>');
             correct++;
