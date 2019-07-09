@@ -64,7 +64,7 @@ $().ready(function () {
         b: 'It was the year Cars was released.',
         c: 'It was the year Toy Story was released.',
         d: 'It is the fastest speed to take a turn during a drift.',
-        ans: 'It was the year Toy Story was released'
+        ans: 'It was the year Toy Story was released.'
     };
     var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8];
     var count = 0;
