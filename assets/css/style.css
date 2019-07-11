@@ -83,6 +83,10 @@ body{
     margin-top:15px;
 }
 
+#imgbox img{
+    max-height: 300px;
+}
+
 
 #gameover{
     text-align: center;
