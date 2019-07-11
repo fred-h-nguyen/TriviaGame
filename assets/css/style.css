@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width:75%;
+    height:75%;
+    margin: auto;
+    background-color: tan;
+    display: flex;
+    flex-direction: column;
+}
+
+#titlebox{
+    background-color: blue;
+    font-size: 64px;
+    font-weight: bolder;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.start{
+    text-align: center;
+    width: 25%;
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 15px;
+    margin-top:25px;
+    border:black 2px solid;
+    background-color: red;
+}
+
+.start:hover{
+    background-color: blue;
+}
+
+#gamebox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.timerbox{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#question{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.answer{
+    font-size:18px;
+    padding:15px;
+    border: 2px black solid;
+    width:25%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.answer:hover{
+    background-color: aqua;
+}
+
+#revealbox{
+    font-size:32px;
+    margin-top:15px;
+}
+
+
+#gameover{
+    text-align: center;
+    font-size:32px;
+    margin:10px
+}
+
+.restart{
+    margin: auto;
+    margin-top: 15px;
+    font-size: 24px;
+    width:25%;
+    background-color:red;
+    border: 2px solid black;
+}
+
+.restart:hover{
+    background-color: blue;
+}
+
