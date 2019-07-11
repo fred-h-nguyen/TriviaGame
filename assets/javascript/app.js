@@ -3,68 +3,68 @@ $().ready(function () {
     var intervalId;
     var timeLeft = 30;
     var q1 = {
-        question: 'Who played Wonder Woman?',
-        a: 'Megan Fox',
-        b: 'Elena Anaya',
-        c: 'Gal Gadot',
-        d: 'Angelina Jolie',
-        ans: 'Gal Gadot'
+        question: 'What year did the original PlayStation release in North America',
+        a: '1993',
+        b: '1994',
+        c: '1995',
+        d: '1996',
+        ans: '1994'
     };
     var q2 = {
-        question: 'What is the name of the street Harry Potter lived on?',
-        a: 'Muggle Alley',
-        b: 'Privet Drive',
-        c: 'Private Drive',
-        d: 'Diagon Alley',
-        ans: 'Privet Drive'
+        question: 'Who is the main character in the Metal Gear series?',
+        a: 'Simon Belmont',
+        b: 'Solid Snake',
+        c: 'James Bond',
+        d: 'Big Boss',
+        ans: 'Solid Snake'
     };
     var q3 = {
-        question: "What is Nemo's Dad named?",
-        a: 'Marlin',
-        b: 'Marvin',
-        c: 'Rick',
-        d: 'Merlin',
-        ans: 'Marlin'
+        question: "What is the name of the fruit collected by Crash Bandicoot?",
+        a: 'Apple Fruit',
+        b: 'Guava Fruit',
+        c: 'Mango Fruit',
+        d: 'Wumpa Fruit',
+        ans: 'Wumpa Fruit'
     };
     var q4 = {
-        question: 'What game does Bond play in Casino Royale?',
-        a: 'Craps',
-        b: 'Roulette',
-        c: 'Blackjack',
-        d: 'Poker',
-        ans: 'Poker'
+        question: 'What game is Chris Redfield the main character in?',
+        a: 'Silent Hill',
+        b: 'Resident Evil',
+        c: 'Ape Escape',
+        d: 'Tomb Raider',
+        ans: 'Resident Evil'
     };
     var q5 = {
-        question: 'What animation company made Shrek?',
-        a: 'Disney',
-        b: 'Pixar',
-        c: 'Studio Ghibli',
-        d: 'Dreamworks',
-        ans: 'Dreamworks'
+        question: 'In the very first Uncharted game, Nathan Drake is looking for which treasure?',
+        a: 'Ark of the Covenant',
+        b: 'Shambala',
+        c: 'El Dorado',
+        d: 'Holy Grail',
+        ans: 'El Dorado'
     };
     var q6 = {
-        question: "What is the name of Jack Sparrow's Ship?",
-        a: 'The Black Flag',
-        b: 'The Black Pearl',
-        c: 'The Hispaniola',
-        d: 'The Interceptor',
-        ans: 'The Black Pearl'
+        question: "What is the name of the hero in God of War",
+        a: 'Kratos',
+        b: 'Mars',
+        c: 'Hermes',
+        d: 'Ares',
+        ans: 'Kratos'
     };
     var q7 = {
-        question: 'What precious resource do the humans want to get in Avatar?',
-        a: 'Unobtanium',
-        b: 'Adamantium',
-        c: 'Diamond',
-        d: 'Dark Matter',
-        ans: 'Unobtanium'
+        question: 'What provides the characters in Final Fantasy VII magic?',
+        a: 'Materia',
+        b: 'Meteor',
+        c: 'Gods',
+        d: 'Guardians',
+        ans: 'Materia'
     };
     var q8 = {
-        question: "Why is Lightning McQueen's number 95?",
-        a: 'It was the year his car was manufactured.',
-        b: 'It was the year Cars was released.',
-        c: 'It was the year Toy Story was released.',
-        d: 'It is the fastest speed to take a turn during a drift.',
-        ans: 'It was the year Toy Story was released.'
+        question: "What is the cause of the destruction in Racoon City of Resident Evil",
+        a: 'Nuclear Bomb',
+        b: 'Earthquake',
+        c: 'Vampires',
+        d: 'T-Virus',
+        ans: 'T-Virus'
     };
     var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8];
     var count = 0;
